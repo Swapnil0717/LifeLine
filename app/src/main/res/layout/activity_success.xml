@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7FB"
+    android:fillViewport="true"
+    tools:context=".Success">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_16sdp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_210sdp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/success" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Ambulance Booked!"
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_22sdp" />
+
+        <TextView
+            android:id="@+id/tvSuccessStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Your ambulance request is scheduled"
+            android:textColor="#777777"
+            android:textSize="@dimen/_11sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:background="@drawable/register_card_bg"
+            android:elevation="@dimen/_6sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Booking ID"
+                android:textColor="#8A8A8A"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvBookingId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="#AMB12345"
+                android:textColor="#0D2A4E"
+                android:textSize="@dimen/_16sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Date &amp; Time"
+                android:textColor="#8A8A8A"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="24 April 2026 • 05:00 AM"
+                android:textColor="#0D2A4E"
+                android:textSize="@dimen/_15sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Pickup Location"
+                android:textColor="#8A8A8A"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvPickupLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Pickup Location"
+                android:textColor="#0D2A4E"
+                android:textSize="@dimen/_15sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Hospital Name"
+                android:textColor="#8A8A8A"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvHospitalName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Hospital Name"
+                android:textColor="#0D2A4E"
+                android:textSize="@dimen/_15sdp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Track Ambulance"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp" />
+
+        <Button
+            android:id="@+id/next1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/payment_unselected_bg"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Go To Home"
+            android:textAllCaps="false"
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_15sdp" />
+
+    </LinearLayout>
+
+</ScrollView>

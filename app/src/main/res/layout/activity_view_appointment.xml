@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7FB"
+    android:fillViewport="true"
+    tools:context=".ViewAppointment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_155sdp"
+            android:background="@drawable/register_header_bg"
+            android:padding="@dimen/_15sdp">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:background="@drawable/circle_white_bg"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_55sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Appointment Details"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_55sdp"
+                android:layout_marginTop="@dimen/_42sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="View your booking information"
+                android:textColor="#FFEAEA"
+                android:textSize="@dimen/_11sdp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="-35dp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:background="@drawable/register_card_bg"
+            android:elevation="@dimen/_6sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgDoctor"
+                    android:layout_width="@dimen/_64sdp"
+                    android:layout_height="@dimen/_64sdp"
+                    android:background="@drawable/profile_circle_bg"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:id="@+id/tvDoctorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_toEndOf="@id/imgDoctor"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Doctor Name"
+                    android:textColor="#0D2A4E"
+                    android:textSize="@dimen/_16sdp" />
+
+                <TextView
+                    android:id="@+id/tvSpecialization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDoctorName"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_toEndOf="@id/imgDoctor"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Specialization"
+                    android:textColor="@color/primaryRed"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/status_booked_bg"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:text="BOOKED"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9sdp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:id="@+id/tvDateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="📅 30 Apr 2026 • 04:57 AM"
+                android:textColor="#555555"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tvHospitalName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="🏥 Hospital Name"
+                android:textColor="#555555"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tvHospitalAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Hospital Address"
+                android:textColor="#777777"
+                android:textSize="@dimen/_10sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:background="#E4E4E4" />
+
+            <TextView
+                android:id="@+id/tvPatientName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Patient: Pranav Pathare"
+                android:textColor="#0D2A4E"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tvPatientPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Phone: 8788039917"
+                android:textColor="#555555"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tvPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/tab_unselected_bg"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="@dimen/_12sdp"
+                android:text="Payment: PENDING • ₹300"
+                android:textColor="@color/primaryRed"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientHome">
+
+    <!-- MAP -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- TOP LOCATION BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+        android:layout_margin="@dimen/_18sdp"
+        android:background="@drawable/top_floating_bg"
+        android:elevation="@dimen/_5sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:src="@drawable/ic_location" />
+
+        <TextView
+            android:id="@+id/tvCurrentLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Fetching location..."
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_13sdp"
+            android:fontFamily="@font/poppins_bold" />
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/profile_circle_bg"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/profile" />
+    </LinearLayout>
+
+    <!-- EMERGENCY FLOATING BUTTON -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/_210sdp"
+        android:background="@drawable/emergency_chip_bg"
+        android:gravity="center"
+        android:paddingStart="@dimen/_18sdp"
+        android:id="@+id/btnEmergencyHelp"
+        android:paddingEnd="@dimen/_18sdp"
+        android:text="Need Emergency Help?"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        android:fontFamily="@font/poppins_bold" />
+
+    <!-- BOTTOM ACTION SHEET -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_190sdp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/home_bottom_sheet_bg"
+        android:elevation="@dimen/_8sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp">
+
+        <View
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_gravity="center"
+            android:background="#D9D9D9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Quick Actions"
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_16sdp"
+            android:fontFamily="@font/poppins_bold" />
+
+        <Button
+            android:id="@+id/next1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/button"
+            android:drawableLeft="@drawable/ambulance"
+            android:drawablePadding="@dimen/_8sdp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Book Ambulance"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/dark_button"
+            android:drawableLeft="@drawable/ambulance"
+            android:drawablePadding="@dimen/_8sdp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Continue to Home"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+</FrameLayout>

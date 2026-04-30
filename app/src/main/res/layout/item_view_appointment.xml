@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_12sdp"
+    android:background="@drawable/doctor_card_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/_12sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgDoctor"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:background="@drawable/profile_circle_bg"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/tvDoctorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/imgDoctor"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Dr. Rahul Sharma"
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/tvSpecialization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDoctorName"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/imgDoctor"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Cardiology"
+            android:textColor="@color/primaryRed"
+            android:textSize="@dimen/_11sdp" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/status_booked_bg"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text="BOOKED"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="📅 21 Apr 2026 • 11:11 AM"
+        android:textColor="#666666"
+        android:textSize="@dimen/_11sdp" />
+
+    <TextView
+        android:id="@+id/tvHospitalName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="🏥 Phoenix Hospital"
+        android:textColor="#666666"
+        android:textSize="@dimen/_11sdp" />
+
+    <TextView
+        android:id="@+id/tvHospitalAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Hospital address"
+        android:textColor="#777777"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/tvPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Payment: PAID • ₹300"
+        android:textColor="@color/primaryRed"
+        android:textSize="@dimen/_11sdp" />
+
+</LinearLayout>

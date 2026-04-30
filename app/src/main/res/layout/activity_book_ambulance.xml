@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+        android:layout_margin="@dimen/_18sdp"
+        android:background="@drawable/top_floating_bg"
+        android:elevation="@dimen/_5sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:src="@drawable/ic_location" />
+
+        <TextView
+            android:id="@+id/tvCurrentLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Pickup Location"
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_13sdp"
+            android:fontFamily="@font/poppins_bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/findingDriverLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_155sdp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/home_bottom_sheet_bg"
+        android:elevation="@dimen/_8sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_18sdp">
+
+        <TextView
+            android:id="@+id/tvFindingTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Finding Driver"
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_18sdp"
+            android:fontFamily="@font/poppins_bold" />
+
+        <TextView
+            android:id="@+id/tvFindingSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="Please wait while we assign a nearby ambulance driver."
+            android:textColor="#777777"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/poppins_bold" />
+
+        <Button
+            android:id="@+id/btnCancelRide"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:background="@drawable/dark_button"
+            android:text="Cancel Ride"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/driverFoundLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_220sdp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/home_bottom_sheet_bg"
+        android:elevation="@dimen/_8sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_18sdp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvRideStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Driver Found"
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_18sdp"
+            android:fontFamily="@font/poppins_bold" />
+
+        <TextView
+            android:id="@+id/tvDriverName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Driver Name"
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/poppins_bold" />
+
+        <TextView
+            android:id="@+id/tvAmbulanceNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ambulance Number"
+            android:textColor="#777777"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/poppins_bold" />
+
+        <TextView
+            android:id="@+id/tvDriverLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="Calculating route..."
+            android:textColor="#777777"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/poppins_bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnTrackDriver"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:text="Track"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_bold" />
+
+            <Button
+                android:id="@+id/btnCallDriver"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/dark_button"
+                android:text="Call"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

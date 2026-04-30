@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LifeLine</string>
+    <string name="welcome">Welcome Back!</string>
+    <string name="login">Login to continue</string>
+    <string name="mail">Enter email or Phone number</string>
+    <string name="phone">Email or phone number</string>
+    <string name="pass">Password</string>
+    <string name="passw">Enter password</string>
+    <string name="forgot">Forgot Password</string>
+    <string name="r2c">Register to COntinue</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

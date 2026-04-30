@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_12sdp"
+    android:background="@drawable/register_card_bg"
+    android:elevation="@dimen/_3sdp"
+    android:orientation="vertical"
+    android:padding="@dimen/_15sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:background="@drawable/tab_unselected_bg"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="APPOINTMENT"
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_9sdp" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/tab_selected_bg"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="BOOKED"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Appointment with Doctor"
+        android:textColor="#0D2A4E"
+        android:textSize="@dimen/_15sdp" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Specialization • Hospital"
+        android:textColor="#777777"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="29 Apr 2026 • 10:30 AM"
+        android:textColor="#555555"
+        android:textSize="@dimen/_10sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:fontFamily="@font/poppins_bold"
+            android:text="View"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@drawable/dark_button"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+
+</LinearLayout>

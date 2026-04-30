@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+        android:layout_margin="@dimen/_18sdp"
+        android:background="@drawable/top_floating_bg"
+        android:elevation="@dimen/_5sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back" />
+
+        <EditText
+            android:id="@+id/tvCurrentLocation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_bold"
+            android:hint="Search pickup location"
+            android:imeOptions="actionSearch"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#0D2A4E"
+            android:textColorHint="#9E9E9E"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageButton
+            android:id="@+id/btnMyLocation"
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:background="@drawable/profile_circle_bg"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/ic_location" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/centerMarker"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_42sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_location" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/_90sdp"
+        android:background="@drawable/emergency_chip_bg"
+        android:gravity="center"
+        android:paddingStart="@dimen/_18sdp"
+        android:paddingEnd="@dimen/_18sdp"
+        android:text="Move map to adjust pickup"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp"
+        android:fontFamily="@font/poppins_bold" />
+
+    <Button
+        android:id="@+id/next1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Confirm Pickup Location"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
+
+</FrameLayout>

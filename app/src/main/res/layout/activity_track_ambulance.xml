@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrackAmbulance">
+
+    <!-- FULL MAP VISIBLE -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- TOP FLOAT ETA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_58sdp"
+        android:layout_margin="@dimen/_18sdp"
+        android:background="@drawable/top_floating_bg"
+        android:elevation="@dimen/_6sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ambulance arriving soon"
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/emergency_chip_bg"
+            android:gravity="center"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:text="8 min"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_bold"/>
+    </LinearLayout>
+
+    <!-- SMALL DRIVER BOTTOM CARD -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_165sdp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/home_bottom_sheet_bg"
+        android:elevation="@dimen/_8sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_14sdp">
+
+        <View
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_gravity="center"
+            android:background="#D9D9D9" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/driverRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            tools:listitem="@layout/item_ambulance_driver" />
+
+    </LinearLayout>
+
+</FrameLayout>

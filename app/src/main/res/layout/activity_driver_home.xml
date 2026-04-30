@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7FB"
+    tools:context=".DriverHome">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_58sdp"
+        android:layout_margin="@dimen/_16sdp"
+        android:background="@drawable/top_floating_bg"
+        android:elevation="@dimen/_6sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:src="@drawable/ic_location" />
+
+        <TextView
+            android:id="@+id/tvCurrentLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_bold"
+            android:maxLines="1"
+            android:text="Fetching location..."
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tvAvailabilityStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Online"
+            android:textColor="@color/primaryRed"
+            android:textSize="@dimen/_10sdp" />
+
+        <FrameLayout
+            android:id="@+id/toggleAvailability"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@drawable/toggle_on_bg">
+
+            <View
+                android:id="@+id/toggleCircle"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_margin="@dimen/_2sdp"
+                android:background="@drawable/toggle_circle_bg" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/_330sdp"
+        android:background="@drawable/emergency_chip_bg"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:id="@+id/btnDriverDashboard"
+        android:paddingStart="@dimen/_18sdp"
+        android:paddingEnd="@dimen/_18sdp"
+        android:text="Driver Dashboard"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_320sdp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/home_bottom_sheet_bg"
+        android:elevation="@dimen/_8sdp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+            <View
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_gravity="center"
+                android:background="#D9D9D9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Ambulance Requests"
+                android:textColor="#0D2A4E"
+                android:textSize="@dimen/_16sdp" />
+
+            <LinearLayout
+                android:id="@+id/noRequestLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_210sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="No request yet"
+                    android:textColor="#0D2A4E"
+                    android:textSize="@dimen/_15sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="You will receive ambulance requests here. Please wait for some time."
+                    android:textColor="#777777"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/requestLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/modern_edit_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/_12sdp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvRequestTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="New Ambulance Request"
+                    android:textColor="#0D2A4E"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/tvRequesterAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Address: Waiting"
+                    android:textColor="#555555"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tvRequesterPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Phone: Waiting"
+                    android:textColor="#555555"
+                    android:textSize="@dimen/_11sdp" />
+
+                <Button
+                    android:id="@+id/btnAcceptRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Accept Request"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+                <Button
+                    android:id="@+id/btnLiveLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/dark_button"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="View Route"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnCallPatient"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Call Patient"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnReachedPatient"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/dark_button"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Reached Patient"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnCompleteRide"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Complete Ride"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnPickedPatient"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/button"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Picked Up Patient"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnCancelRide"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/dark_button"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Cancel Ride"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

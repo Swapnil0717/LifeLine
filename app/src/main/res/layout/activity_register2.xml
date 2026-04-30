@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7FB"
+    android:fillViewport="true"
+    tools:context=".Register">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:background="@drawable/register_header_bg"
+            android:padding="@dimen/_15sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/lifeline_logo" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:layout_marginTop="-45dp"
+            android:background="@drawable/register_card_bg"
+            android:elevation="@dimen/_6sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_18sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="Register As"
+                android:textColor="#0D2A4E"
+                android:textSize="@dimen/_22sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="Choose your account type"
+                android:textColor="#777777"
+                android:textSize="@dimen/_11sdp" />
+
+            <LinearLayout
+                android:id="@+id/cardPatient"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@drawable/doctor_card_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_14sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_55sdp"
+                    android:background="@drawable/icon_soft_bg"
+                    android:padding="@dimen/_12sdp"
+                    android:src="@drawable/profile" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Patient"
+                        android:textColor="#0D2A4E"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Book ambulance and appointments"
+                        android:textColor="#777777"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:gravity="center"
+                    android:text="›"
+                    android:textColor="@color/primaryRed"
+                    android:textSize="@dimen/_24sdp"
+                    android:fontFamily="@font/poppins_bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardDoctor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:background="@drawable/doctor_card_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_14sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_55sdp"
+                    android:background="@drawable/icon_soft_bg"
+                    android:padding="@dimen/_12sdp"
+                    android:src="@drawable/profile" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Doctor"
+                        android:textColor="#0D2A4E"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Register your hospital profile"
+                        android:textColor="#777777"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:gravity="center"
+                    android:text="›"
+                    android:textColor="@color/primaryRed"
+                    android:textSize="@dimen/_24sdp"
+                    android:fontFamily="@font/poppins_bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardDriver"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:background="@drawable/doctor_card_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_14sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_55sdp"
+                    android:background="@drawable/icon_soft_bg"
+                    android:padding="@dimen/_12sdp"
+                    android:src="@drawable/ambulance" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Ambulance Driver"
+                        android:textColor="#0D2A4E"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Accept ambulance ride requests"
+                        android:textColor="#777777"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:gravity="center"
+                    android:text="›"
+                    android:textColor="@color/primaryRed"
+                    android:textSize="@dimen/_24sdp"
+                    android:fontFamily="@font/poppins_bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7FB"
+    android:orientation="vertical"
+    tools:context=".Doctor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:background="@color/white"
+        android:elevation="@dimen/_4sdp"
+        android:padding="@dimen/_10sdp">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@drawable/circle_white_bg"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Doctors"
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_20sdp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Select Doctor"
+        android:textColor="#0D2A4E"
+        android:textSize="@dimen/_18sdp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/doctorRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_doctor" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_18sdp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp" />
+
+</LinearLayout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7FB"
+    android:fillViewport="true"
+    tools:context=".Booking">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:background="@drawable/register_header_bg"
+            android:padding="@dimen/_15sdp">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:background="@drawable/circle_white_bg"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_55sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="Book Ambulance"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_55sdp"
+                android:layout_marginTop="@dimen/_45sdp"
+                android:text="Fast emergency ride booking"
+                android:textColor="#FFEAEA"
+                android:textSize="@dimen/_11sdp"
+                android:fontFamily="@font/poppins_bold"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-38dp"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:background="@drawable/register_card_bg"
+            android:elevation="@dimen/_6sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_18sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ride Details"
+                android:textColor="#0D2A4E"
+                android:textSize="@dimen/_17sdp"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <!-- HOSPITAL -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="Hospital Name"
+                android:textColor="#565353"
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/etHospitalName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/modern_edit_bg"
+                android:hint="Enter Hospital Name"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/drop_down"
+                android:textColorHint="@color/textGray"
+                android:inputType="textCapWords"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"/>
+
+            <!-- PICKUP -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="Pickup Location"
+                android:textColor="#565353"
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/modern_edit_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etPickupLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/textGray"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter or choose pickup location"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:textColor="@color/black"
+                    android:singleLine="true"/>
+
+                <ImageButton
+                    android:id="@+id/btnPickupMap"
+                    android:layout_width="@dimen/_42sdp"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/circle_white_bg"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/ic_location"/>
+            </LinearLayout>
+
+            <!-- DATE TIME -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="Date &amp; Time"
+                android:textColor="#565353"
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etDate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/modern_edit_bg"
+                    android:focusable="false"
+                    android:hint="Date"
+                    android:padding="@dimen/_10sdp"
+                    android:textColorHint="@color/textGray"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/date"
+                    android:paddingStart="@dimen/_15sdp"/>
+
+                <EditText
+                    android:id="@+id/etTime"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@drawable/modern_edit_bg"
+                    android:focusable="false"
+                    android:hint="Time"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/textGray"
+                    android:drawableEnd="@drawable/time"
+                    android:paddingStart="@dimen/_15sdp"/>
+            </LinearLayout>
+
+            <!-- PATIENT -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="Patient Name"
+                android:textColor="#565353"
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <EditText
+                android:id="@+id/etPatientName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/textGray"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/modern_edit_bg"
+                android:hint="Enter patient name"
+                android:paddingStart="@dimen/_15sdp"/>
+
+            <!-- AGE -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="Age"
+                android:textColor="#565353"
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="@font/poppins_bold"/>
+
+            <EditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/modern_edit_bg"
+                android:hint="Enter age"
+                android:textColor="@color/black"
+                android:textColorHint="@color/textGray"
+                android:inputType="number"
+                android:paddingStart="@dimen/_15sdp"/>
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:background="@drawable/button"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_bold"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_12sdp"
+    android:background="@drawable/register_card_bg"
+    android:elevation="@dimen/_3sdp"
+    android:orientation="vertical"
+    android:padding="@dimen/_15sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvPatientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Rahul Patil"
+            android:textColor="#0D2A4E"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/tab_selected_bg"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:text="BOOKED"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvAppointmentDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Date: 20 May 2026"
+        android:textColor="#555555"
+        android:textSize="@dimen/_11sdp" />
+
+    <TextView
+        android:id="@+id/tvAppointmentTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Time: 10:30 AM"
+        android:textColor="#555555"
+        android:textSize="@dimen/_11sdp" />
+
+    <TextView
+        android:id="@+id/tvPatientPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Phone: 9876543210"
+        android:textColor="#555555"
+        android:textSize="@dimen/_11sdp" />
+
+    <TextView
+        android:id="@+id/tvPatientAgeGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Age: 25 • Gender: Male"
+        android:textColor="#555555"
+        android:textSize="@dimen/_11sdp" />
+
+    <TextView
+        android:id="@+id/tvReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Reason: General checkup"
+        android:textColor="#555555"
+        android:textSize="@dimen/_11sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCallPatient"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:background="@drawable/button"
+            android:text="Call"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="@dimen/_11sdp"/>
+
+        <Button
+            android:id="@+id/btnCompleteAppointment"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:background="@drawable/button"
+            android:text="Complete"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="@dimen/_11sdp"/>
+
+        <Button
+            android:id="@+id/btnCancelAppointment"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:background="@drawable/dark_button"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="@dimen/_11sdp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnViewHistory"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/tab_unselected_bg"
+        android:text="View Patient History"
+        android:textAllCaps="false"
+        android:textColor="#0D2A4E"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="@dimen/_11sdp"/>
+
+</LinearLayout>
