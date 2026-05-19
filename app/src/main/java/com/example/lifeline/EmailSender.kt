@@ -12,8 +12,8 @@ import javax.mail.internet.MimeMessage
 
 object EmailSender {
 
-    private const val SENDER_EMAIL = "pranavpathhare0987@gmail.com"
-    private const val APP_PASSWORD = "qgnjoqsrtlmwkhlt"
+    private const val SENDER_EMAIL = "your-email"
+    private const val APP_PASSWORD = "your-email-app password"
 
     private fun createSession(): Session {
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
